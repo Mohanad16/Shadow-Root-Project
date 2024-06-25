@@ -1,4 +1,4 @@
-package org.example;
+package ShadowDOM;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -16,9 +16,9 @@ public class Main {
         email.sendKeys("M.abolela+1+1+1@converted.in");
         WebElement pass = driver.findElement(By.id("password"));
         pass.sendKeys("password");
-           WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
-           loginButton.click();
-           Thread.sleep(2000);
+        WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
+        loginButton.click();
+        Thread.sleep(2000);
 
         String script = "return document.querySelector('convertedin-sidebar').shadowRoot.querySelector('div.convertedin-sidebar')";
 
@@ -34,10 +34,9 @@ public class Main {
         Thread.sleep(1000);
         EmailDropdown.click();
         WebElement EmailParent2 = EmailDropdown.findElement(By.cssSelector("div.p-toggleable-content.ng-tns-c823280842-3.ng-trigger.ng-trigger-tabContent"));
-        WebElement EmailClick= EmailParent2.findElement(By.cssSelector("a.flex.justify-content-between.align-items-center.ng-star-inserted"));
+        WebElement EmailClick = EmailParent2.findElement(By.cssSelector("a.flex.justify-content-between.align-items-center.ng-star-inserted"));
         Thread.sleep(1000);
         EmailClick.click();
-
 
 
     }
